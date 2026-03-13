@@ -24,6 +24,26 @@ Step 2: VIEW GEOJSON POINT DATA ON MAP
 //      Use the fetch method to access the GeoJSON from your online repository
 //      Convert the response to JSON format and then store the response in your new variable
 
+let collision_point;
+
+fetch(
+  "https://raw.githubusercontent.com/JessicaCHuang26/ggr472-lab4-main/refs/heads/main/data/pedcyc_collision_06-21.geojson",
+)
+  .then((response) => response.json())
+  .then((response) => {
+    console.log(response);
+    collision_point = response;
+    let envresult = turf.envelope(collision_point);
+    console.log(envresult.bbox);
+
+    bboxgeojson = {
+      type: "Feature Collection",
+      features: [envresult],
+    };
+
+    console.log(bboxgeojson.features[0].geometry.coordinates[0][0][1]);
+  });
+
 /*--------------------------------------------------------------------
     Step 3: CREATE BOUNDING BOX AND HEXGRID
 --------------------------------------------------------------------*/
@@ -33,6 +53,25 @@ Step 2: VIEW GEOJSON POINT DATA ON MAP
 //      Use bounding box coordinates as argument in the turf hexgrid function
 //      **Option: You may want to consider how to increase the size of your bbox to enable greater geog coverage of your hexgrid
 //                Consider return types from different turf functions and required argument types carefully here
+
+map.on("load", () => {
+  // Add datasource using GeoJSON variable
+  map.addSource("input-data", {
+    type: "geojson",
+    data: "https://raw.githubusercontent.com/JessicaCHuang26/ggr472-lab4-main/refs/heads/main/data/pedcyc_collision_06-21.geojson",
+  });
+
+  // Set style for when new points are added to the data source
+  map.addLayer({
+    id: "input-pnts",
+    type: "circle",
+    source: "input-data",
+    paint: {
+      "circle-radius": 5,
+      "circle-color": "blue",
+    },
+  });
+});
 
 /*--------------------------------------------------------------------
 Step 4: AGGREGATE COLLISIONS BY HEXGRID
