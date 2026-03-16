@@ -1,27 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GGR472 Lab 4</title>
     <!-- mapbox API -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- Turf.js -->
-    <script src='https://unpkg.com/@turf/turf@7.2.0/turf.min.js'></script>
-</head>
+    <script src="https://unpkg.com/@turf/turf@7.2.0/turf.min.js"></script>
+  </head>
 
-<body>
-
+  <body>
     <!-- MAP CONTAINER -->
-    <div id='map' class='map'></div>
+    <div id="map" class="map"></div>
+
+    <!-- LEGEND -->
+    <div class="legend">
+      <strong>Collision Count (count per 0.5 km hexagon)</strong>
+      <div id="legend-items"></div>
+    </div>
+
+    <!-- LEGEND_2 -->
+    <div class="legend2">
+      <strong>Toggle Layers</strong>
+      <div id="legend-items2"></div>
+    </div>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
