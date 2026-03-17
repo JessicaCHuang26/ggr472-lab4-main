@@ -1,3 +1,4 @@
+/*Map Style*/
 .map {
   position: absolute;
   top: 0;
@@ -7,7 +8,7 @@
   width: 100%;
 }
 
-/*Legend Styles*/
+/*Legend Style*/
 .legend {
   position: absolute;
   top: 20px;
@@ -31,15 +32,17 @@
   border: 1px solid #999;
 }
 
-/*Legend Checkbox Styles */
+/*Legend Checkbox Style */
 .legend-row input[type="checkbox"] {
   margin: 0;
 }
 
+/*Legend 2 Style */
 .legend2 {
   top: 250px;
 }
 
+/*Map Title Style */
 .map-title {
   position: absolute;
   top: 20px;
@@ -53,6 +56,7 @@
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
+/*Measuring Tool Style */
 #measure-toggle {
   position: absolute;
   right: 20px;
@@ -67,6 +71,7 @@
   cursor: pointer;
 }
 
+/*Distance Display Style */
 .distance-container {
   position: absolute;
   right: 20px;
@@ -74,6 +79,7 @@
   pointer-events: none;
 }
 
+/*Distance Display Text Style */
 .distance-container pre {
   margin: 0;
   padding: 10px 14px;
@@ -87,6 +93,7 @@
   font-family: Arial, sans-serif;
 }
 
+/*Format Legend Rown Style */
 .legend-row {
   display: flex;
   align-items: center;
@@ -95,6 +102,7 @@
   cursor: pointer;
 }
 
+/*Format Legend Title Style */
 .legend-title {
   font-weight: bold;
   font-size: 16px;
@@ -102,11 +110,14 @@
   margin-bottom: 4px;
 }
 
+/*Format Legend Title Subtitle Style */
 .legend-subtitle {
   font-size: 12px;
   font-weight: normal;
   margin-bottom: 8px;
 }
+
+/*Reset View Button Style */
 .reset-view {
   position: absolute;
   left: 20px;
