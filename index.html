@@ -23,15 +23,28 @@
 
     <!-- LEGEND -->
     <div class="legend">
-      <strong>Collision Count (count per 0.5 km hexagon)</strong>
+      <div class="legend-title">Legend</div>
+      <div class="legend-subtitle">
+        Collision Count (per 0.6 km hexagonal grid)
+      </div>
       <div id="legend-items"></div>
     </div>
 
     <!-- LEGEND_2 -->
-    <div class="legend2">
-      <strong>Toggle Layers</strong>
+    <div class="legend legend2">
+      <div class="legend-title">Layers</div>
       <div id="legend-items2"></div>
     </div>
+
+    <div class="map-title">
+      Toronto Pedestrian & Cyclist Collisions (2006–2021)
+    </div>
+    <!-- distance -->
+    <div id="map"></div>
+    <button id="measure-toggle" type="button">Measure Distance</button>
+    <div id="distance" class="distance-container"></div>
+    <!-- reset orentation -->
+    <button id="reset-view" class="reset-view">Reset View</button>
 
     <script src="script.js"></script>
   </body>
